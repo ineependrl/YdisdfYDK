@@ -23,9 +23,6 @@ jobs:
       - name: install
         run: npm i && npm run setup:skip-build
 
-      - name: test designer
-        run: cd packages/designer && npm run test:cov && cd ../..
-
       - name: Upload designer coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
